@@ -1,0 +1,36 @@
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+*.tfplan
+*.tfvars
+terraform.tfstate*
+.terraform/
+
+# Ignore provider-specific files
+*.provider.tf
+
+# Ignore compiled Terraform configurations
+*.tf.json
+
+# Ignore sensitive or private files
+*.pem
+*.key
+*.pub
+*.p12
+
+# Ignore log files
+*.log
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore editor-specific files
+*~
+*.sw[a-p]
+*.sw[op]
+*.swo
+*.swpx
+*.swp
+*.swn
+**/.*exe
+*.exe
