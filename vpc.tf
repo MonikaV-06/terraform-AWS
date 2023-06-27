@@ -46,3 +46,10 @@ resource "aws_route" "main-igw-route" {
   destination_cidr_block = "0.0.0.0/0"
   gateway_id             = aws_internet_gateway.main-igw.id
 }
+
+# Route Table - Subnet Association
+resource "aws_route_table_association" "main-rt-sn" {
+  subnet_id      = aws_subnet.main-subnet.id
+  route_table_id = aws_route_table.main-rtb.id
+}
+
