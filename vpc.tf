@@ -23,11 +23,19 @@ resource "aws_subnet" "main-subnet" {
   }
 }
 
-
+# Internet Gateway
 resource "aws_internet_gateway" "main-igw" {
   vpc_id = aws_vpc.main.id
 
   tags = {
     Name = "main-igw"
+  }
+}
+
+# Route Table
+resource "aws_route_table" "main-rtb" {
+  vpc_id = aws_vpc.main.id
+  tags = {
+    Name = "main-rtb"
   }
 }
