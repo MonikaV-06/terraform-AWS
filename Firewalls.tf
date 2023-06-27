@@ -29,3 +29,9 @@ resource "aws_network_acl_rule" "main-egress" {
   from_port      = 0
   to_port        = 65535
 }
+
+
+resource "aws_network_acl_association" "nacl-subnet" {
+  network_acl_id = aws_network_acl.main-nacl.id
+  subnet_id      = aws_subnet.main-subnet.id
+}
