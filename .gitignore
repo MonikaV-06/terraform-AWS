@@ -34,3 +34,6 @@ terraform.tfstate*
 *.swn
 **/.*exe
 *.exe
+
+# Ignore Credentials
+provider.tf
